@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-    
+
     steps:
     - uses: actions/checkout@v2
 
@@ -26,9 +26,24 @@ jobs:
       run: |
         npm install
         gulp bundle:pack
+    
+    - name: Save bundle
+      uses: actions/upload-artifact@v2
+      with:
+        name: bundle-${{ matrix.node-version }}
+        path: build/ui-bundle.zip
+        retention-days: 5
 
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download bundle
+      uses: actions/download-artifact@v2
+      with:
+        name: bundle-16.x
+        path: build/ui-bundle.zip
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
-        files: ui-bundle.zip
+        files: build/ui-bundle.zip
         draft: true
