@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
     
     steps:
     - uses: actions/checkout@v2
@@ -30,6 +30,6 @@ jobs:
     - name: Archive bundle
       uses: actions/upload-artifact@v2
       with:
-        name: bundle
+        name: bundle-${{ matrix.node-version }}
         path: |
-          build/ui-bundle.zip
+          build
