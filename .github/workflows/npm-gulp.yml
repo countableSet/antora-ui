@@ -40,10 +40,15 @@ jobs:
       with:
         name: bundle
         path: build/ui-bundle.zip
+    - name: Debug
+      run: |
+        ls -al
+        ls -al build
+        pwd
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
-        files: antora-ui/build/ui-bundle.zip
+        files: build/ui-bundle.zip
         name: ${{ github.ref }}
         tag_name: ${{ github.ref }}
         draft: true
