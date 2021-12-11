@@ -43,7 +43,7 @@ jobs:
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
-        files: build/ui-bundle.zip
+        files: antora-ui/build/ui-bundle.zip
         name: ${{ github.ref }}
         tag_name: ${{ github.ref }}
         draft: true
