@@ -21,11 +21,11 @@ jobs:
     - name: Build
       run: |
         npm install
-        gulp bundle:pack
+        node_modules/.bin/gulp bundle
 
     - name: Create Release
       uses: softprops/action-gh-release@v1
-      if: github.ref == 'refs/head/master'
+#       if: github.ref == 'refs/head/master'
       with:
         files: build/ui-bundle.zip
         draft: true
