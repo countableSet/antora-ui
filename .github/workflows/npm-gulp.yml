@@ -39,15 +39,10 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: bundle
-    - name: Debug
-      run: |
-        ls -al
-        ls -al build
-        pwd
     - name: Create Release
       uses: softprops/action-gh-release@v1
       with:
-        files: build/ui-bundle.zip
+        files: ui-bundle.zip
         name: ${{ github.ref }}
         tag_name: ${{ github.ref }}
         draft: true
