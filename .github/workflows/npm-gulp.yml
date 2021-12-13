@@ -65,7 +65,10 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: preview
-
+    - name: debug
+      run: |
+        ls -al
+        ls -al preview
     - name: Publish gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
