@@ -1,0 +1,30 @@
+.hidden {
+  display: none;
+}
+
+.switch {
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: #e1e1e1;
+  display: inline-block;
+}
+
+.switch--item {
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #e1e1e1;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.switch--item:last-of-type {
+  border-width: 0 0 0 0;
+}
+
+.switch--item.selected {
+  background-color: #fafafa;
+  color: #d14;
+}

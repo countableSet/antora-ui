@@ -75,6 +75,20 @@ This is an example paragraph.
 
 How about some code?
 
+.Kotlin
+[source,kotlin,role=primary]
+----
+fun cool() = true
+----
+
+.Java
+[source,java,role=secondary]
+----
+public boolean cool() {
+  return false;
+}
+----
+
 [source,js]
 ----
 vfs
