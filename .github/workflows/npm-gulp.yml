@@ -65,12 +65,10 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: preview
-    - name: debug
-      run: |
-        ls -al
-        ls -al preview
+        path: public
+
     - name: Publish gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./preview
+        publish_dir: ./public
