@@ -43,6 +43,6 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: ui-bundle.zip
-        name: ${{ github.ref }}
-        tag_name: ${{ github.ref }}
+        name: Build ${{ github.run_id }}
+        tag_name: b${{ github.run_id }}
         draft: false
