@@ -5,17 +5,17 @@
 .switch {
   border-width: 1px 1px 0 1px;
   border-style: solid;
-  border-color: #e1e1e1;
+  border-color: var(--code-tab-border-color);
   display: inline-block;
 }
 
 .switch--item {
   border-width: 0 1px 0 0;
   border-style: solid;
-  border-color: #e1e1e1;
+  border-color: var(--code-tab-border-color);
   padding: 10px;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--code-tab-background);
+  color: var(--code-tab-font-color);
   display: inline-block;
   cursor: pointer;
 }
@@ -25,6 +25,6 @@
 }
 
 .switch--item.selected {
-  background-color: #fafafa;
-  color: #d14;
+  background-color: var(--code-tab-selected-background);
+  color: var(--code-tab-selected-font-color);
 }

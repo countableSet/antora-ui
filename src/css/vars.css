@@ -112,6 +112,12 @@
   --toc-heading-font-color: var(--doc-font-color);
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
+  /* code tabs */
+  --code-tab-background: var(--color-white);
+  --code-tab-border-color: #e1e1e1;
+  --code-tab-font-color: #333;
+  --code-tab-selected-background: #fafafa;
+  --code-tab-selected-font-color: #d14;
   /* footer */
   --footer-line-height: var(--doc-line-height);
   --footer-background: var(--color-smoke-90);
