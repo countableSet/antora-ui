@@ -1,4 +1,22 @@
 /*! Adapted from the GitHub style by Vasily Polovnyov <vast@whiteants.net> */
+:root {
+  --color-keyword: #333;
+  --color-string: #d14;
+  --color-type: #458;
+  --color-number: #008080;
+  --color-built-in: #0086b3;
+  --color-title: #900;
+}
+
+[data-theme="dark"] {
+  --color-keyword: rgb(200, 195, 188);
+  --color-string: rgb(239, 53, 100);
+  --color-type: rgb(139, 166, 197);
+  --color-number: rgb(114, 255, 255);
+  --color-built-in: rgb(79, 211, 255);
+  --color-title: rgb(255, 97, 97);
+}
+
 .hljs-comment,
 .hljs-quote {
   color: #998;
@@ -8,7 +26,7 @@
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
+  color: var(--color-keyword);
   font-weight: var(--monospace-font-weight-bold);
 }
 
@@ -17,18 +35,18 @@
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #008080;
+  color: var(--color-number);
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+  color: var(--color-string);
 }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
-  color: #900;
+  color: var(--color-title);
   font-weight: var(--monospace-font-weight-bold);
 }
 
@@ -38,7 +56,7 @@
 
 .hljs-type,
 .hljs-class .hljs-title {
-  color: #458;
+  color: var(--color-type);
   font-weight: var(--monospace-font-weight-bold);
 }
 
@@ -61,7 +79,7 @@
 
 .hljs-built_in,
 .hljs-builtin-name {
-  color: #0086b3;
+  color: var(--color-built-in);
 }
 
 .hljs-meta {
