@@ -52,6 +52,14 @@
   background-image: url(../img/home.svg);
 }
 
+[data-theme="dark"] .home-link {
+  filter: invert(42%);
+}
+
+[data-theme="dark"] .nav-toggle {
+  filter: invert(42%);
+}
+
 .edit-this-page {
   display: none;
   padding-right: 0.5rem;

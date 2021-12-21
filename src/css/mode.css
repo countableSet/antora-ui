@@ -1,0 +1,9 @@
+.themeSwitch {
+  height: calc(var(--navbar-height) / 2);
+  width: calc(var(--navbar-height) / 2);
+  background: url(../img/mode-dark-white.svg) no-repeat center;
+}
+
+[data-theme="dark"] .themeSwitch {
+  background: url(../img/mode-light-white.svg) no-repeat center;
+}
