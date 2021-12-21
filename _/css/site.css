@@ -329,10 +329,10 @@
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
   /* code tabs */
-  --code-tab-background: #181a1b;
+  --code-tab-background: #1b1d1e;
   --code-tab-border-color: #383d40;
-  --code-tab-font-color: #333;
-  --code-tab-selected-background: #1b1d1e;
+  --code-tab-font-color: var(--body-font-color);
+  --code-tab-selected-background: var(--code-background);
   --code-tab-selected-font-color: #d14;
   /* footer */
   --footer-line-height: var(--doc-line-height);
@@ -2779,6 +2779,24 @@ footer.footer {
 
 /*! Adapted from the GitHub style by Vasily Polovnyov <vast@whiteants.net> */
 
+:root {
+  --color-keyword: #333;
+  --color-string: #d14;
+  --color-type: #458;
+  --color-number: #008080;
+  --color-built-in: #0086b3;
+  --color-title: #900;
+}
+
+[data-theme="dark"] {
+  --color-keyword: rgb(200, 195, 188);
+  --color-string: rgb(239, 53, 100);
+  --color-type: rgb(139, 166, 197);
+  --color-number: rgb(114, 255, 255);
+  --color-built-in: rgb(79, 211, 255);
+  --color-title: rgb(255, 97, 97);
+}
+
 .hljs-comment,
 .hljs-quote {
   color: #998;
@@ -2789,6 +2807,7 @@ footer.footer {
 .hljs-selector-tag,
 .hljs-subst {
   color: #333;
+  color: var(--color-keyword);
   font-weight: 500;
   font-weight: var(--monospace-font-weight-bold);
 }
@@ -2799,17 +2818,20 @@ footer.footer {
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
   color: #008080;
+  color: var(--color-number);
 }
 
 .hljs-string,
 .hljs-doctag {
   color: #d14;
+  color: var(--color-string);
 }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
   color: #900;
+  color: var(--color-title);
   font-weight: 500;
   font-weight: var(--monospace-font-weight-bold);
 }
@@ -2821,6 +2843,7 @@ footer.footer {
 .hljs-type,
 .hljs-class .hljs-title {
   color: #458;
+  color: var(--color-type);
   font-weight: 500;
   font-weight: var(--monospace-font-weight-bold);
 }
@@ -2845,6 +2868,7 @@ footer.footer {
 .hljs-built_in,
 .hljs-builtin-name {
   color: #0086b3;
+  color: var(--color-built-in);
 }
 
 .hljs-meta {
