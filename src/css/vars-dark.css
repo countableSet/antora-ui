@@ -1,3 +1,9 @@
+@media (prefers-color-scheme: dark) {
+  html {
+    content: "dark";
+  }
+}
+
 [data-theme="dark"] {
   /* colors */
   --color-white: #fff;

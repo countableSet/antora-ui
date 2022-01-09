@@ -1,20 +1,30 @@
 ;(function () {
   'use strict'
-
-  let dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  const switchButton = document.getElementById('themeSwitch')
-
+  const systemInitiatedDark = window.matchMedia('(prefers-color-scheme: dark)')
+  if (systemInitiatedDark.matches) {
+    document.documentElement.setAttribute('data-theme', 'dark')
+  }
   document.addEventListener('DOMContentLoaded', function () {
-    if (dark) {
-      document.body.setAttribute('data-theme', 'dark')
+    if (systemInitiatedDark.matches) {
+      document.documentElement.setAttribute('data-theme', 'dark')
     }
   })
-
+  const switchButton = document.getElementById('themeSwitch')
   switchButton.addEventListener('click', function (e) {
     e.preventDefault()
-    dark = !dark
-    dark
-      ? document.body.setAttribute('data-theme', 'dark')
-      : document.body.removeAttribute('data-theme')
+    const theme = sessionStorage.getItem('theme')
+    if (theme === 'dark') {
+      document.documentElement.removeAttribute('data-theme')
+      sessionStorage.setItem('theme', 'light')
+    } else if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      sessionStorage.setItem('theme', 'dark')
+    } else if (systemInitiatedDark.matches) {
+      document.documentElement.removeAttribute('data-theme')
+      sessionStorage.setItem('theme', 'light')
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      sessionStorage.setItem('theme', 'dark')
+    }
   })
 })()
