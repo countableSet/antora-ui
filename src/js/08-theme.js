@@ -1,3 +1,4 @@
+/* global sessionStorage */
 ;(function () {
   'use strict'
   const systemInitiatedDark = window.matchMedia('(prefers-color-scheme: dark)')
