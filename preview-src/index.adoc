@@ -184,6 +184,8 @@ Ea mea agam graeci philosophia.
 * [ ] todo
 * [x] done!
 
+Showing a gear icon: icon:gear[]
+
 Vis veri graeci legimus ad.
 
 sed::
