@@ -1,6 +1,5 @@
 @import "typeface-roboto.css";
 @import "typeface-roboto-mono.css";
-@import "font-awesome.css";
 @import "vars.css";
 @import "vars-dark.css";
 @import "base.css";
@@ -12,6 +11,7 @@
 @import "page-versions.css";
 @import "toc.css";
 @import "doc.css";
+@import "admonitionblock.css";
 @import "pagination.css";
 @import "header.css";
 @import "footer.css";

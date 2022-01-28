@@ -73,6 +73,7 @@
   --doc-font-color: var(--color-jet-50);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
+  --doc-icon-filter: invert(14.5%);
   --doc-line-height: 1.6;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
