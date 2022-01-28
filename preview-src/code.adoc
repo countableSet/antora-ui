@@ -1,0 +1,288 @@
+= Highlightjs Tests
+
+[source,asciidoc]
+----
+* Edgar Allan Poe
+* Sheri S. Tepper
+* Bill Bryson
+----
+
+[source,bash]
+----
+#!/bin/bash -e
+
+host=${1}
+
+if [[ ${host} != *".com"* ]]; then
+    host="${suv_host}.example.com"
+fi
+----
+
+[source,cpp]
+----
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << "Hello World!";
+  return 0;
+}
+----
+
+[source,cs]
+----
+var list1 = new List<object>();
+var list2 = new List<Customer>();
+var list3 = new List<int>();
+----
+
+[source,css]
+----
+.hljs-subst {
+  color: #e06c75;
+}
+----
+
+[source,diff]
+----
+$ diff a.txt b.txt
+0a1
+> Tamil Nadu
+2,3c3
+< Uttar Pradesh
+ Andhra Pradesh
+5c5
+ Uttar pradesh
+----
+
+[source,dockerfile]
+----
+ARG VERSION=3.0.0
+FROM antora/antora:${VERSION}
+
+COPY ./antora-lunr-copy-extension /antora-lunr-copy-extension
+
+RUN yarn global add \
+    @antora/lunr-extension \
+    file:/antora-lunr-copy-extension
+----
+
+[source,go]
+----
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("hello world")
+}
+----
+
+[source,gradle]
+----
+plugins {
+    id 'war'
+    id 'idea'
+    id 'jacoco'
+}
+----
+
+[source,groovy]
+----
+// branchIsMainline
+@NonCPS
+Boolean call(String branchName='') {
+  (branchName ?: getJenkinsBranch()) ==~ /^${getMainlineBranchRegex()}$/
+}
+----
+
+[source,http]
+----
+POST /awesome HTTP/1.1
+Content-Type: application/json
+Content-Length: 100
+Host: localhost:50010
+
+{
+  "subject" : "hello world Awesome!"
+}
+----
+
+[source,java]
+----
+@Configuration
+class LocalConfiguration {
+    @Bean
+    Plugin plugin(Environment env) {
+        return new Plugin(env, new XmlMapper());
+    }
+}
+----
+
+[source,javascript]
+----
+vfs
+  .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
+  .pipe(tap((file) => {
+    file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
+  }))
+  .pipe(buffer())
+  .pipe(uglify())
+  .pipe(gulp.dest('build'))
+----
+
+[source,json]
+----
+{
+  "subject" : "hello world Awesome!",
+  "list": ["1", "2"]
+}
+----
+
+[source,kotlin]
+----
+@SpringBootApplication
+class DovahSidecarApplication
+
+fun main(args: Array<String>) {
+    runApplication<DovahSidecarApplication>(args = args)
+}
+----
+
+[source,less]
+----
+@width: 10px;
+@height: @width + 10px;
+
+#header {
+  width: @width;
+  height: @height;
+}
+----
+
+[source,markdown]
+----
+|head1 |head2 |
+|======|======|
+|1|2|
+----
+
+[source,objectivec]
+----
+#import <Foundation/Foundation.h>
+
+@interface SampleClass:NSObject
+- (void)sampleMethod;
+@end
+
+@implementation SampleClass
+
+- (void)sampleMethod {
+   NSLog(@"Hello, World! \n");
+}
+
+@end
+
+int main() {
+   /* my first program in Objective-C */
+   SampleClass *sampleClass = [[SampleClass alloc]init];
+   [sampleClass sampleMethod];
+   return 0;
+}
+----
+
+[source,properties]
+----
+property.one=1
+property.two=2
+----
+
+[source,python]
+----
+user_input = str(input("Enter a Phrase: "))
+text = user_input.split()
+a = " "
+for i in text:
+    a = a+str(i[0]).upper()
+print(a)
+----
+
+[source,ruby]
+----
+def sum_eq_n?(arr, n)
+  return true if arr.empty? && n == 0
+  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
+end
+----
+
+[source,rust]
+----
+/// Returns a capture value as a `str` slice, or the default if the match fails.
+pub fn capture_or_default<'a>(captures: &Captures<'a>, key: &'static str, default: &'a str) -> &'a str {
+  captures.name(key).map(|it| it.as_str()).unwrap_or(default)
+}
+----
+
+[source,scala]
+----
+object ScalaExample{
+    def main(args:Array[String]){
+        println "Hello Scala"
+    }
+}
+----
+
+[source,scss]
+----
+.header {
+  width: 50%;
+  margin: 0 auto;
+
+  &-link {
+    color: blue;
+  }
+}
+----
+
+[source,shell]
+----
+$ curl www.google.com
+----
+
+[source,sql]
+----
+SELECT * FROM Customers;
+----
+
+[source,swift]
+----
+print("Hello world!")
+----
+
+[source,typescript]
+----
+app.listen(10000, function () {
+  console.log('SuWon church API Server listening on port 10000!')
+});
+----
+
+[source,xml]
+----
+<note>
+<to>Tove</to>
+<from>Jani</from>
+<heading>Reminder</heading>
+<body>Don't forget me this weekend!</body>
+</note>
+----
+
+[source,yaml]
+----
+---
+apiVersion: v3
+kind: Pod
+metadata:
+  name: rss-site
+  labels:
+    app: web
+----

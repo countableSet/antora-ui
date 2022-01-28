@@ -1,104 +1,176 @@
-/*! Adapted from the GitHub style by Vasily Polovnyov <vast@whiteants.net> */
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+  https://github.com/highlightjs/highlight.js/blob/d302ec44df4dd977b297809150b600a876fe246f/src/styles/github.css
+*/
 :root {
-  --color-keyword: #333;
-  --color-string: #d14;
-  --color-type: #458;
-  --color-number: #008080;
-  --color-built-in: #0086b3;
-  --color-title: #900;
+  --color-font: #24292e;
+  --color-background: #fff;
+  --color-keyword: #d73a49;
+  --color-title: #6f42c1;
+  --color-attribute: #005cc5;
+  --color-string: #032f62;
+  --color-symbol: #e36209;
+  --color-code: #6a737d;
+  --color-name: #22863a;
+  --color-subst: #24292e;
+  --color-section: #005cc5;
+  --color-bullet: #735c0f;
+  --color-emphasis: #24292e;
+  --color-strong: #24292e;
+  --color-addition-font: #22863a;
+  --color-addition-background: #f0fff4;
+  --color-deletion-font: #b31d28;
+  --color-deletion-background: #ffeef0;
 }
 
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+  https://github.com/highlightjs/highlight.js/blob/d302ec44df4dd977b297809150b600a876fe246f/src/styles/github-dark.css
+*/
 [data-theme="dark"] {
-  --color-keyword: rgb(200, 195, 188);
-  --color-string: rgb(239, 53, 100);
-  --color-type: rgb(139, 166, 197);
-  --color-number: rgb(114, 255, 255);
-  --color-built-in: rgb(79, 211, 255);
-  --color-title: rgb(255, 97, 97);
+  --color-font: #c9d1d9;
+  --color-background: #0d1117;
+  --color-keyword: #ff7b72;
+  --color-title: #d2a8ff;
+  --color-attribute: #79c0ff;
+  --color-string: #a5d6ff;
+  --color-symbol: #ffa657;
+  --color-code: #8b949e;
+  --color-name: #7ee787;
+  --color-subst: #c9d1d9;
+  --color-section: #1f6feb;
+  --color-bullet: #f2cc60;
+  --color-emphasis: #c9d1d9;
+  --color-strong: #c9d1d9;
+  --color-addition-font: #aff5b4;
+  --color-addition-background: #033a16;
+  --color-deletion-font: #ffdcd7;
+  --color-deletion-background: #67060c;
 }
 
-.hljs-comment,
-.hljs-quote {
-  color: #998;
-  font-style: italic;
+.hljs {
+  color: var(--color-font);
+  background: var(--color-background);
 }
 
+.hljs-doctag,
 .hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: var(--color-keyword);
-  font-weight: var(--monospace-font-weight-bold);
-}
-
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
 .hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: var(--color-number);
-}
-
-.hljs-string,
-.hljs-doctag {
-  color: var(--color-string);
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: var(--color-keyword);
 }
 
 .hljs-title,
-.hljs-section,
-.hljs-selector-id {
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
   color: var(--color-title);
-  font-weight: var(--monospace-font-weight-bold);
 }
 
-.hljs-subst {
-  font-weight: normal;
-}
-
-.hljs-type,
-.hljs-class .hljs-title {
-  color: var(--color-type);
-  font-weight: var(--monospace-font-weight-bold);
-}
-
-.hljs-tag,
-.hljs-name,
-.hljs-attribute {
-  color: #000080;
-  font-weight: normal;
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: var(--color-attribute);
 }
 
 .hljs-regexp,
-.hljs-link {
-  color: #009926;
-}
-
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: var(--color-string);
 }
 
 .hljs-built_in,
-.hljs-builtin-name {
-  color: var(--color-built-in);
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: var(--color-symbol);
 }
 
-.hljs-meta {
-  color: #999;
-  font-weight: var(--monospace-font-weight-bold);
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: var(--color-code);
 }
 
-.hljs-deletion {
-  background: #fdd;
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: var(--color-name);
 }
 
-.hljs-addition {
-  background: #dfd;
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: var(--color-subst);
+}
+
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: var(--color-section);
+  font-weight: bold;
+}
+
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: var(--color-bullet);
 }
 
 .hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: var(--color-emphasis);
   font-style: italic;
 }
 
 .hljs-strong {
-  font-weight: var(--monospace-font-weight-bold);
+  /* prettylights-syntax-markup-bold */
+  color: var(--color-strong);
+  font-weight: bold;
+}
+
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: var(--color-addition-font);
+  background-color: var(--color-addition-background);
+}
+
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: var(--color-deletion-font);
+  background-color: var(--color-deletion-background);
+}
+
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
 }
