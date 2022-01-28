@@ -1,5 +1,5 @@
 .doc .admonitionblock .icon i.fa {
-  font: normal normal normal 14px/1 Roboto;
+  font: revert, calc(15 / var(--rem-base) * 1rem), sans-serif;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: revert;
 }
