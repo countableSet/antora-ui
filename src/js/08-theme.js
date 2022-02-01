@@ -1,4 +1,4 @@
-/* global sessionStorage */
+/* global localStorage */
 ;(function () {
   'use strict'
   const systemInitiatedDark = window.matchMedia('(prefers-color-scheme: dark)')
@@ -13,19 +13,19 @@
   const switchButton = document.getElementById('themeSwitch')
   switchButton.addEventListener('click', function (e) {
     e.preventDefault()
-    const theme = sessionStorage.getItem('theme')
+    const theme = localStorage.getItem('theme')
     if (theme === 'dark') {
       document.documentElement.removeAttribute('data-theme')
-      sessionStorage.setItem('theme', 'light')
+      localStorage.setItem('theme', 'light')
     } else if (theme === 'light') {
       document.documentElement.setAttribute('data-theme', 'dark')
-      sessionStorage.setItem('theme', 'dark')
+      localStorage.setItem('theme', 'dark')
     } else if (systemInitiatedDark.matches) {
       document.documentElement.removeAttribute('data-theme')
-      sessionStorage.setItem('theme', 'light')
+      localStorage.setItem('theme', 'light')
     } else {
       document.documentElement.setAttribute('data-theme', 'dark')
-      sessionStorage.setItem('theme', 'dark')
+      localStorage.setItem('theme', 'dark')
     }
   })
 })()
