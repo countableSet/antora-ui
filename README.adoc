@@ -2,6 +2,14 @@
 
 This is forked version of the link:https://gitlab.com/antora/antora-ui-default[antora default ui].
 
+Enhancements that have been made to the original are:
+
+* light/dark mode and theme switcher button
+* github highlightjs styles for light/dark modes
+* source code tabs
+* styled admonition blocks with icons
+* font-awesome 4 (font and css)
+
 == Release
 
 See releases for publish versions of the ui-bundle zip.
