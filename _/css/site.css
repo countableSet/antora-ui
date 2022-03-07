@@ -1459,6 +1459,7 @@ auto;
 .doc .literalblock,
 .doc .sidebarblock,
 .doc .verseblock,
+.doc .videoblock,
 .doc .quoteblock,
 .doc .partintro,
 .doc details,
@@ -1683,7 +1684,8 @@ auto;
   content: attr(title);
 }
 
-.doc .imageblock {
+.doc .imageblock,
+.doc .videoblock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1710,6 +1712,11 @@ auto;
 
 .doc .image:not(.left):not(.right) > img {
   margin-top: -0.2em;
+}
+
+.doc .videoblock iframe {
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 #preamble .abstract blockquote {
@@ -1886,6 +1893,7 @@ auto;
 .doc .literalblock .title,
 .doc .listingblock .title,
 .doc .openblock .title,
+.doc .videoblock .title,
 .doc .tableblock caption {
   color: #5d5d5d;
   color: var(--caption-font-color);
@@ -2609,6 +2617,33 @@ body {
   border-radius: 0.1em;
   line-height: 1.5;
   padding: 0 0.25em;
+}
+
+#search-input:disabled {
+  background-color: #dbdbdb;
+  /* disable cursor */
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+#search-input:disabled::-webkit-input-placeholder {
+  color: #4c4c4c;
+}
+
+#search-input:disabled::-moz-placeholder {
+  color: #4c4c4c;
+}
+
+#search-input:disabled:-ms-input-placeholder {
+  color: #4c4c4c;
+}
+
+#search-input:disabled::-ms-input-placeholder {
+  color: #4c4c4c;
+}
+
+#search-input:disabled::placeholder {
+  color: #4c4c4c;
 }
 
 .navbar-burger {
