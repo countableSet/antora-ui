@@ -19,6 +19,8 @@
   hljs.registerLanguage('kotlin', require('highlight.js/lib/languages/kotlin'))
   hljs.registerLanguage('less', require('highlight.js/lib/languages/less'))
   hljs.registerLanguage('markdown', require('highlight.js/lib/languages/markdown'))
+  hljs.registerLanguage('nix', require('highlight.js/lib/languages/nix'))
+  hljs.registerLanguage('none', require('highlight.js/lib/languages/plaintext'))
   hljs.registerLanguage('objectivec', require('highlight.js/lib/languages/objectivec'))
   hljs.registerLanguage('properties', require('highlight.js/lib/languages/properties'))
   hljs.registerLanguage('python', require('highlight.js/lib/languages/python'))
