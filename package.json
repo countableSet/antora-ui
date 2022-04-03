@@ -8,14 +8,14 @@
     "url": "https://gitlab.com/antora/antora-ui-default.git"
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 17.0.0"
   },
   "browserslist": [
     "last 2 versions"
   ],
   "devDependencies": {
     "@asciidoctor/core": "~2.2",
-    "autoprefixer": "~9.7",
+    "autoprefixer": "~10.4",
     "browser-pack-flat": "~3.4",
     "browserify": "~16.5",
     "cssnano": "~4.1",
@@ -33,7 +33,7 @@
     "gulp-connect": "~5.7",
     "gulp-eslint": "~6.0",
     "gulp-imagemin": "~6.2",
-    "gulp-postcss": "~8.0",
+    "gulp-postcss": "~9.0",
     "gulp-stylelint": "~13.0",
     "gulp-uglify": "~3.0",
     "gulp-vinyl-zip": "~2.2",
@@ -41,10 +41,10 @@
     "highlight.js": "9.18.3",
     "js-yaml": "~3.13",
     "merge-stream": "~2.0",
-    "postcss-calc": "~7.0",
-    "postcss-custom-properties": "~9.1",
-    "postcss-import": "~12.0",
-    "postcss-url": "~8.0",
+    "postcss-calc": "~8.2",
+    "postcss-custom-properties": "~12.1",
+    "postcss-import": "~14.1",
+    "postcss-url": "~10.1",
     "prettier-eslint": "~9.0",
     "require-directory": "~2.1",
     "require-from-string": "~2.0",
