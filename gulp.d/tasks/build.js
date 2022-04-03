@@ -51,9 +51,8 @@ module.exports = (src, dest, preview) => () => {
     postcssVar({ preserve: true }),
     preview ? postcssCalc : () => {},
     autoprefixer,
-    preview
-      ? () => {}
-      : (css, result) => cssnano({ preset: 'default' })(css, result).then(() => postcssPseudoElementFixer(css, result)),
+    preview ? () => {} : cssnano({ preset: 'default' }),
+    preview ? () => {} : (css, result) => postcssPseudoElementFixer(css, result),
   ]
 
   return merge(
