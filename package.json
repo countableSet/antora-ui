@@ -45,7 +45,7 @@
     "postcss-custom-properties": "~12.1",
     "postcss-import": "~14.1",
     "postcss-url": "~10.1",
-    "prettier-eslint": "~9.0",
+    "prettier-eslint": "~13.0",
     "require-directory": "~2.1",
     "require-from-string": "~2.0",
     "stylelint": "~13.3",
