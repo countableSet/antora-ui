@@ -397,9 +397,7 @@ body {
   background: var(--body-background);
   color: #222;
   color: var(--body-font-color);
-  font-family: "Roboto"
-,
-sans-serif;
+  font-family: "Roboto", sans-serif;
   font-family: var(--body-font-family);
   line-height: 1.15;
   line-height: var(--body-line-height);
@@ -422,9 +420,7 @@ a:active {
 code,
 kbd,
 pre {
-  font-family: "Roboto Mono"
-,
-monospace;
+  font-family: "Roboto Mono", monospace;
   font-family: var(--monospace-font-family);
 }
 
@@ -1238,8 +1234,7 @@ a + .breadcrumbs {
           hyphens: auto;
   line-height: 1.6;
   line-height: var(--doc-line-height);
-  margin: 0
-auto;
+  margin: 0 auto;
   margin: var(--doc-margin);
   max-width: 40rem;
   max-width: var(--doc-max-width);
@@ -1253,8 +1248,7 @@ auto;
             flex: auto;
     font-size: 0.94444rem;
     font-size: var(--doc-font-size--desktop);
-    margin: 0
-2rem;
+    margin: 0 2rem;
     margin: var(--doc-margin--desktop);
     max-width: 46rem;
     max-width: var(--doc-max-width--desktop);
@@ -2054,9 +2048,7 @@ auto;
   right: 0.5rem;
   color: #808080;
   color: var(--pre-annotation-font-color);
-  font-family: "Roboto"
-,
-sans-serif;
+  font-family: "Roboto", sans-serif;
   font-family: var(--body-font-family);
   font-size: 0.75rem;
   font-size: calc(13.5/var(--rem-base)*1rem);
@@ -2225,9 +2217,7 @@ sans-serif;
   border: 1px solid currentColor;
   border-radius: 100%;
   display: inline-block;
-  font-family: "Roboto"
-,
-sans-serif;
+  font-family: "Roboto", sans-serif;
   font-family: var(--body-font-family);
   font-size: 0.75rem;
   font-size: calc(13.5/var(--rem-base)*1rem);
