@@ -18,7 +18,7 @@ See releases for publish versions of the ui-bundle zip.
 
 link:https://docs.antora.org/antora-ui-default/[Original docs] for full help.
 
-For a link of all the gulp taks
+For a link of all the gulp tasks
 
  $ gulp --tasks-simple
 
