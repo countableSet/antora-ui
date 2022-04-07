@@ -3,10 +3,9 @@
   font-style: normal;
   font-weight: 400;
   src:
-    local("Roboto Regular"),
-    local("Roboto-Regular"),
-    url(../font/roboto-latin-400.woff2) format("woff2"),
-    url(../font/roboto-latin-400.woff) format("woff");
+    url(../font/roboto-latin-400-normal.woff2) format("woff2"),
+    url(../font/roboto-latin-400-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -14,10 +13,9 @@
   font-style: italic;
   font-weight: 400;
   src:
-    local("Roboto Italic"),
-    local("Roboto-Italic"),
-    url(../font/roboto-latin-400italic.woff2) format("woff2"),
-    url(../font/roboto-latin-400italic.woff) format("woff");
+    url(../font/roboto-latin-400-italic.woff2) format("woff2"),
+    url(../font/roboto-latin-400-italic.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -25,10 +23,9 @@
   font-style: normal;
   font-weight: 500;
   src:
-    local("Roboto Medium"),
-    local("Roboto-Medium"),
-    url(../font/roboto-latin-500.woff2) format("woff2"),
-    url(../font/roboto-latin-500.woff) format("woff");
+    url(../font/roboto-latin-500-normal.woff2) format("woff2"),
+    url(../font/roboto-latin-500-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -36,10 +33,9 @@
   font-style: italic;
   font-weight: 500;
   src:
-    local("Roboto Medium Italic"),
-    local("Roboto-MediumItalic"),
-    url(../font/roboto-latin-500italic.woff2) format("woff2"),
-    url(../font/roboto-latin-500italic.woff) format("woff");
+    url(../font/roboto-latin-500-italic.woff2) format("woff2"),
+    url(../font/roboto-latin-500-italic.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -47,10 +43,9 @@
   font-style: normal;
   font-weight: 400;
   src:
-    local("Roboto Mono Regular"),
-    local("RobotoMono-Regular"),
-    url(../font/roboto-mono-latin-400.woff2) format("woff2"),
-    url(../font/roboto-mono-latin-400.woff) format("woff");
+    url(../font/roboto-mono-latin-400-normal.woff2) format("woff2"),
+    url(../font/roboto-mono-latin-400-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -58,10 +53,9 @@
   font-style: normal;
   font-weight: 500;
   src:
-    local("Roboto Mono Medium"),
-    local("RobotoMono-Medium"),
-    url(../font/roboto-mono-latin-500.woff2) format("woff2"),
-    url(../font/roboto-mono-latin-500.woff) format("woff");
+    url(../font/roboto-mono-latin-500-normal.woff2) format("woff2"),
+    url(../font/roboto-mono-latin-500-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 :root {
@@ -73,7 +67,8 @@
   --color-smoke-70: #f0f0f0;
   --color-smoke-90: #e1e1e1;
   --color-gray-10: #c1c1c1;
-  --color-gray-30: #8e8e8e;
+  --color-gray-30: #9c9c9c;
+  --color-gray-40: #8e8e8e;
   --color-gray-50: #808080;
   --color-gray-70: #5d5d5d;
   --color-jet-20: #4a4a4a;
@@ -97,7 +92,9 @@
   --body-background: var(--color-white);
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--color-smoke-90);
+  --scrollbar-track-color: var(--color-smoke-30);
   --scrollbar-thumb-color: var(--color-gray-10);
+  --scrollbar_hover-thumb-color: var(--color-gray-30);
   /* navbar */
   --navbar-background: var(--color-jet-80);
   --navbar-font-color: var(--color-white);
@@ -121,9 +118,9 @@
   --toolbar-background: var(--panel-background);
   --toolbar-border-color: var(--panel-border-color);
   --toolbar-font-color: var(--color-gray-70);
-  --toolbar-muted-color: var(--color-gray-30);
+  --toolbar-muted-color: var(--color-gray-40);
   --page-version-menu-background: var(--color-smoke-70);
-  --page-version-missing-font-color: var(--color-gray-30);
+  --page-version-missing-font-color: var(--color-gray-40);
   /* admonitions */
   --caution-color: #a0439c;
   --caution-on-color: var(--color-white);
@@ -169,7 +166,7 @@
   --quote-background: var(--panel-background);
   --quote-border-color: var(--color-gray-70);
   --quote-font-color: var(--color-gray-70);
-  --quote-attribution-font-color: var(--color-gray-30);
+  --quote-attribution-font-color: var(--color-gray-40);
   --sidebar-background: var(--color-smoke-90);
   --table-border-color: var(--panel-border-color);
   --table-stripe-background: var(--panel-background);
@@ -383,6 +380,7 @@ html {
   font-size: 1.0625em;
   font-size: var(--body-font-size);
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 1024px) {
@@ -487,22 +485,69 @@ object[type="image/svg+xml"]:not([width]) {
   width: fit-content;
 }
 
-@supports (scrollbar-width: thin) {
-  body * {
-    scrollbar-width: thin;
-    scrollbar-color: #c1c1c1 transparent;
-    scrollbar-color: var(--scrollbar-thumb-color) transparent;
+::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+::-moz-placeholder {
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+::placeholder {
+  opacity: 0.5;
+}
+
+@media (pointer: fine) {
+  @supports (scrollbar-width: thin) {
+    html {
+      scrollbar-color: #c1c1c1 #fafafa;
+      scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+    }
+
+    body * {
+      scrollbar-width: thin;
+      scrollbar-color: #c1c1c1 transparent;
+      scrollbar-color: var(--scrollbar-thumb-color) transparent;
+    }
   }
-}
 
-body ::-webkit-scrollbar {
-  height: 0.25rem;
-  width: 0.25rem;
-}
+  html::-webkit-scrollbar {
+    background-color: #fafafa;
+    background-color: var(--scrollbar-track-color);
+    height: 12px;
+    width: 12px;
+  }
 
-body ::-webkit-scrollbar-thumb {
-  background-color: #c1c1c1;
-  background-color: var(--scrollbar-thumb-color);
+  body ::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: #c1c1c1;
+    background-color: var(--scrollbar-thumb-color);
+    border: 3px solid transparent;
+    border-radius: 12px;
+  }
+
+  body ::-webkit-scrollbar-thumb {
+    border-width: 1.75px;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #9c9c9c;
+    background-color: var(--scrollbar_hover-thumb-color);
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -581,6 +626,10 @@ body ::-webkit-scrollbar-thumb {
   }
 }
 
+.nav a {
+  color: inherit;
+}
+
 .nav .panels {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -637,11 +686,8 @@ html.is-clipped--nav {
   padding: 0.25em 0 0.125em;
 }
 
-.nav-menu a {
-  color: inherit;
-}
-
 .nav-list {
+  list-style: none;
   margin: 0 0 0 0.75rem;
   padding: 0;
 }
@@ -651,7 +697,6 @@ html.is-clipped--nav {
 }
 
 .nav-item {
-  list-style: none;
   margin-top: 0.5em;
 }
 
@@ -677,6 +722,7 @@ html.is-clipped--nav {
   border: none;
   outline: none;
   line-height: inherit;
+  padding: 0;
   position: absolute;
   height: 1.35em;
   height: calc(var(--nav-line-height)*1em);
@@ -742,10 +788,13 @@ html.is-clipped--nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
   line-height: 1;
   height: 2.5rem;
   height: var(--drawer-height);
+}
+
+.nav-panel-explore:not(:first-child) .context {
+  cursor: pointer;
 }
 
 .nav-panel-explore .context .version {
@@ -802,7 +851,6 @@ html.is-clipped--nav {
 .nav-panel-explore .component .title {
   font-weight: 500;
   font-weight: var(--body-font-weight-bold);
-  color: inherit;
 }
 
 .nav-panel-explore .versions {
@@ -811,14 +859,13 @@ html.is-clipped--nav {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  list-style: none;
   padding-left: 0;
   margin-top: -0.25rem;
   line-height: 1;
+  list-style: none;
 }
 
 .nav-panel-explore .component .version {
-  display: block;
   margin: 0.375rem 0.375rem 0 0;
 }
 
@@ -826,7 +873,6 @@ html.is-clipped--nav {
   border: 1px solid #c1c1c1;
   border: 1px solid var(--nav-border-color);
   border-radius: 0.25rem;
-  color: inherit;
   opacity: 0.75;
   white-space: nowrap;
   padding: 0.125em 0.25em;
@@ -1157,7 +1203,12 @@ a + .breadcrumbs {
   overflow-y: auto;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
-  scrollbar-width: none;
+}
+
+@supports (scrollbar-width: none) {
+  .toc.sidebar .toc-menu ul {
+    scrollbar-width: none;
+  }
 }
 
 .toc .toc-menu ul::-webkit-scrollbar {
@@ -3203,6 +3254,11 @@ footer.footer {
     margin: auto;
     max-width: none;
     padding-bottom: 2rem;
+  }
+
+  .doc .admonitionblock td.icon {
+    -webkit-print-color-adjust: exact;
+            color-adjust: exact;
   }
 
   .doc .listingblock code[data-lang]::before {
