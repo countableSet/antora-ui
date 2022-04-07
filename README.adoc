@@ -80,3 +80,13 @@ If you need to include source maps in the bundle, you can do so by setting the `
  $ SOURCEMAPS=true gulp bundle
 
 In this case, the bundle will include the source maps, which can be used for debugging your production site.
+
+=== Merge Upstream
+
+[source,bash]
+----
+git remote add upstream git@gitlab.com:antora/antora-ui-default.git
+git fetch upstream
+git checkout master
+git merge --no-ff upstream/master
+----
