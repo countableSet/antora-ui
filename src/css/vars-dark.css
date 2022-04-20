@@ -143,10 +143,10 @@
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
-  --toc-width: calc(162 / var(--rem-base) * 1rem);
-  --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
-  --doc-max-width: calc(720 / var(--rem-base) * 1rem);
-  --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
+  --toc-width: calc(100% / 6);
+  --toc-width--widescreen: calc(100% / 6);
+  --doc-max-width: calc(100% - var(--toc-width));
+  --doc-max-width--desktop: calc(100% - var(--toc-width--widescreen));
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
