@@ -200,10 +200,10 @@
   --nav-width: calc(270/var(--rem-base)*1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
-  --toc-width: calc(162/var(--rem-base)*1rem);
-  --toc-width--widescreen: calc(216/var(--rem-base)*1rem);
-  --doc-max-width: calc(720/var(--rem-base)*1rem);
-  --doc-max-width--desktop: calc(828/var(--rem-base)*1rem);
+  --toc-width: 16.66667%;
+  --toc-width--widescreen: 16.66667%;
+  --doc-max-width: calc(100% - var(--toc-width));
+  --doc-max-width--desktop: calc(100% - var(--toc-width--widescreen));
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
@@ -356,10 +356,10 @@
   --nav-width: calc(270/var(--rem-base)*1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
-  --toc-width: calc(162/var(--rem-base)*1rem);
-  --toc-width--widescreen: calc(216/var(--rem-base)*1rem);
-  --doc-max-width: calc(720/var(--rem-base)*1rem);
-  --doc-max-width--desktop: calc(828/var(--rem-base)*1rem);
+  --toc-width: 16.66667%;
+  --toc-width--widescreen: 16.66667%;
+  --doc-max-width: calc(100% - var(--toc-width));
+  --doc-max-width--desktop: calc(100% - var(--toc-width--widescreen));
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
@@ -916,8 +916,8 @@ html.is-clipped--nav {
 
   aside.toc.sidebar {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 9rem;
-            flex: 0 0 9rem;
+        -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
     -ms-flex: 0 0 var(--toc-width);
         flex: 0 0 var(--toc-width);
     -webkit-box-ordinal-group: 2;
@@ -928,8 +928,8 @@ html.is-clipped--nav {
 
 @media screen and (min-width: 1216px) {
   aside.toc.sidebar {
-    -ms-flex-preferred-size: 12rem;
-        flex-basis: 12rem;
+    -ms-flex-preferred-size: 16.66667%;
+        flex-basis: 16.66667%;
     -ms-flex-preferred-size: var(--toc-width--widescreen);
         flex-basis: var(--toc-width--widescreen);
   }
@@ -1287,7 +1287,7 @@ a + .breadcrumbs {
   line-height: var(--doc-line-height);
   margin: 0 auto;
   margin: var(--doc-margin);
-  max-width: 40rem;
+  max-width: 83.33333%;
   max-width: var(--doc-max-width);
   padding: 0 1rem 4rem;
 }
@@ -1301,7 +1301,7 @@ a + .breadcrumbs {
     font-size: var(--doc-font-size--desktop);
     margin: 0 2rem;
     margin: var(--doc-margin--desktop);
-    max-width: 46rem;
+    max-width: 83.33333%;
     max-width: var(--doc-max-width--desktop);
     min-width: 0;
   }
