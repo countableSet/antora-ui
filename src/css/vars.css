@@ -24,9 +24,9 @@
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: "Roboto", sans-serif;
+  --body-font-family: -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, ubuntu;
   --body-font-weight-bold: 500;
-  --monospace-font-family: "Roboto Mono", monospace;
+  --monospace-font-family: ui-monospace, sfmono-regular, sf mono, menlo, consolas, liberation mono, monospace;
   --monospace-font-weight-bold: 500;
   /* base */
   --body-background: var(--color-white);
