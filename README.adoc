@@ -9,8 +9,8 @@ Enhancements that have been made to the original are:
 * source code tabs
 * styled admonition blocks with icons
 * font-awesome 4 (font and css)
-* widens main content panel by percentages #10
-* replace Roboto font with system font #11
+* widens main content panel by percentages link:https://github.com/countableSet/antora-ui/issues/10[#10]
+* replace Roboto font with system font link:https://github.com/countableSet/antora-ui/issues/11[#11]
 
 == Release
 
