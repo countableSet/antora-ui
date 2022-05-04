@@ -42,7 +42,9 @@
   --body-background: var(--color-body-bg);
   --panel-background: var(--color-panel-bg);
   --panel-border-color: var(--color-gray-20);
-  --scrollbar-thumb-color: var(--color-gray-20);
+  --scrollbar-track-color: #343435;
+  --scrollbar-thumb-color: #8e8e8e;
+  --scrollbar_hover-thumb-color: #9a9a9a;
   /* navbar */
   --navbar-background: var(--panel-background);
   --navbar-font-color: var(--body-font-color);
