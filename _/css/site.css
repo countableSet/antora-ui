@@ -32,9 +32,9 @@
   --body-background: var(--color-white);
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--color-smoke-90);
-  --scrollbar-track-color: var(--color-smoke-30);
-  --scrollbar-thumb-color: var(--color-gray-10);
-  --scrollbar_hover-thumb-color: var(--color-gray-30);
+  --scrollbar-track-color: #f7f7f7;
+  --scrollbar-thumb-color: #7f7f7f;
+  --scrollbar_hover-thumb-color: #7b7b7b;
   /* navbar */
   --navbar-background: var(--color-jet-80);
   --navbar-font-color: var(--color-white);
@@ -193,7 +193,9 @@
   --body-background: var(--color-body-bg);
   --panel-background: var(--color-panel-bg);
   --panel-border-color: var(--color-gray-20);
-  --scrollbar-thumb-color: var(--color-gray-20);
+  --scrollbar-track-color: #343435;
+  --scrollbar-thumb-color: #8e8e8e;
+  --scrollbar_hover-thumb-color: #9a9a9a;
   /* navbar */
   --navbar-background: var(--panel-background);
   --navbar-font-color: var(--body-font-color);
@@ -425,19 +427,19 @@ object[type="image/svg+xml"]:not([width]) {
 @media (pointer: fine) {
   @supports (scrollbar-width: thin) {
     html {
-      scrollbar-color: #c1c1c1 #fafafa;
+      scrollbar-color: #7f7f7f #f7f7f7;
       scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
     }
 
     body * {
       scrollbar-width: thin;
-      scrollbar-color: #c1c1c1 transparent;
+      scrollbar-color: #7f7f7f transparent;
       scrollbar-color: var(--scrollbar-thumb-color) transparent;
     }
   }
 
   html::-webkit-scrollbar {
-    background-color: #fafafa;
+    background-color: #f7f7f7;
     background-color: var(--scrollbar-track-color);
     height: 12px;
     width: 12px;
@@ -450,7 +452,7 @@ object[type="image/svg+xml"]:not([width]) {
 
   ::-webkit-scrollbar-thumb {
     background-clip: padding-box;
-    background-color: #c1c1c1;
+    background-color: #7f7f7f;
     background-color: var(--scrollbar-thumb-color);
     border: 3px solid transparent;
     border-radius: 12px;
@@ -462,7 +464,7 @@ object[type="image/svg+xml"]:not([width]) {
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #9c9c9c;
+    background-color: #7b7b7b;
     background-color: var(--scrollbar_hover-thumb-color);
   }
 }
