@@ -23,6 +23,10 @@
   --color-smoke-40: #d3cfc9;
   --color-white-20: #e8e6e3;
   --color-white-10: #c5c0b8;
+  --color-body-bg: #202124;
+  --color-panel-bg: #191919;
+  --color-pre-bg: #26272b;
+  --color-pre-border: #585b63;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
@@ -30,13 +34,13 @@
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-white-10);
-  --body-font-family: "Roboto", sans-serif;
+  --body-font-family: -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, ubuntu;
   --body-font-weight-bold: 500;
-  --monospace-font-family: "Roboto Mono", monospace;
+  --monospace-font-family: ui-monospace, sfmono-regular, sf mono, menlo, consolas, liberation mono, monospace;
   --monospace-font-weight-bold: 500;
   /* base */
-  --body-background: var(--color-jet-70);
-  --panel-background: var(--color-jet-90);
+  --body-background: var(--color-body-bg);
+  --panel-background: var(--color-panel-bg);
   --panel-border-color: var(--color-gray-20);
   --scrollbar-thumb-color: var(--color-gray-20);
   /* navbar */
@@ -103,8 +107,8 @@
   --example-border-color: var(--color-smoke-70);
   --kbd-background: var(--panel-background);
   --kbd-border-color: var(--color-gray-10);
-  --pre-background: var(--panel-background);
-  --pre-border-color: var(--panel-border-color);
+  --pre-background: var(--color-pre-bg);
+  --pre-border-color: var(--color-pre-border);
   --pre-annotation-font-color: var(--color-smoke-80);
   --quote-background: var(--panel-background);
   --quote-border-color: var(--color-smoke-70);
@@ -120,10 +124,10 @@
   --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
   /* code tabs */
-  --code-tab-background: #1b1d1e;
+  --code-tab-background: var(--color-body-bg);
   --code-tab-border-color: #383d40;
   --code-tab-font-color: var(--body-font-color);
-  --code-tab-selected-background: var(--code-background);
+  --code-tab-selected-background: var(--pre-background);
   --code-tab-selected-font-color: #d14;
   /* footer */
   --footer-line-height: var(--doc-line-height);
