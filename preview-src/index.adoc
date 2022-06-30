@@ -17,6 +17,18 @@ Vestibulum consectetur nec urna a luctus.
 Quisque pharetra tristique arcu fringilla dapibus.
 https://example.org[Curabitur,role=unresolved] ut massa aliquam, cursus enim et, accumsan lectus.
 
+== Text Formatting Tests
+
+It has *strong* significance to me.
+
+I _cannot_ stress this enough.
+
+Type `OK` to accept.
+
+That *_really_* has to go.
+
+Can't pick one? Let's use them `*_all_*`.
+
 == Cu solet
 
 Nominavi luptatum eos, an vim hinc philosophia intellegebat.
