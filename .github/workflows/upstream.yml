@@ -2,9 +2,11 @@ name: Pull Upstream
 
 on:
   push: {}
+#  schedule:
+#    - cron: '0 0 1 * *'
 
 jobs:
-  build:
+  merge:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +25,16 @@ jobs:
           git fetch upstream
           git checkout -b upstream-merge
           git merge --no-ff upstream/master
+
+      - name: Create pull-request
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              head:  upstream-merge,
+              base:  master,
+              title: 'Merge upstream into master',
+              body: 'todo',
+            });
