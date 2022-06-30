@@ -25,9 +25,9 @@
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
   --body-font-family: -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, ubuntu;
-  --body-font-weight-bold: 500;
+  --body-font-weight-bold: 700;
   --monospace-font-family: ui-monospace, sfmono-regular, sf mono, menlo, consolas, liberation mono, monospace;
-  --monospace-font-weight-bold: 500;
+  --monospace-font-weight-bold: 700;
   /* base */
   --body-background: var(--color-white);
   --panel-background: var(--color-smoke-30);
