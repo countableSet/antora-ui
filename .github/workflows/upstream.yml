@@ -12,7 +12,7 @@ jobs:
 
       - name: Create branch
         run: |
-          git remote add upstream git@gitlab.com:antora/antora-ui-default.git
+          git remote add upstream https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/antora/antora-ui-default.git
           git fetch upstream
           git checkout -b upstream-merge
           git merge --no-ff upstream/master
