@@ -26,15 +26,27 @@ jobs:
           git checkout -b upstream-merge
           git merge --no-ff upstream/master
 
+      - name: Parse log messages
+        id: log_message
+        run: |
+          content="$(git log master...upstream-merge --format="%h - %ad - %s" --date=format:'%b %d %Y')"
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          echo "::set-output name=run::$content"
+
       - name: Create pull-request
         uses: actions/github-script@v6
+        env:
+          LOG_MESSAGE: ${{ steps.log_message.outputs.run }}
         with:
           script: |
+            const { LOG_MESSAGE } = process.env;
             github.rest.pulls.create({
               owner: context.repo.owner,
               repo:  context.repo.repo,
               head:  upstream-merge,
               base:  master,
               title: 'Merge upstream into master',
-              body: 'todo',
+              body: LOG_MESSAGE,
             });
