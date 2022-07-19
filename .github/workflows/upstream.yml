@@ -2,8 +2,8 @@ name: Pull Upstream
 
 on:
   push: {}
-#  schedule:
-#    - cron: '0 0 1 * *'
+  schedule:
+    - cron: '0 0 1 * *'
 
 jobs:
   merge:
@@ -34,6 +34,11 @@ jobs:
           echo "Log changes count = ${content}"
           echo "::set-output name=count::$content"
 
+      - name: Push Branch
+        if: steps.log_count.outputs.count != 0
+        run: |
+          git push -u origin upstream-merge
+
       - name: Parse log messages
         if: steps.log_count.outputs.count != 0
         id: log_message
@@ -57,6 +62,6 @@ jobs:
               repo:  context.repo.repo,
               head:  upstream-merge,
               base:  master,
-              title: 'Merge upstream into master',
+              title: 'Merge branch 'master' for gitlab.com:antora/antora-ui-default',
               body: LOG_MESSAGE,
             });
