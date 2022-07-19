@@ -26,16 +26,25 @@ jobs:
           git checkout -b upstream-merge
           git merge --no-ff upstream/master
 
+      - name: Count changes
+        id: log_count
+        run: |
+          content="$(git rev-list --count origin/master...upstream-merge)"
+          echo "Log changes count = ${content}"
+          echo "::set-output name=count::$content"
+
       - name: Parse log messages
+        if: steps.log_count.outputs.count != 0
         id: log_message
         run: |
-          content="$(git log master...upstream-merge --format="%h - %ad - %s" --date=format:'%b %d %Y')"
+          content="$(git log origin/master...upstream-merge --format="%h - %ad - %s" --date=format:'%b %d %Y')"
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
           content="${content//$'\r'/'%0D'}"
           echo "::set-output name=run::$content"
 
       - name: Create pull-request
+        if: steps.log_count.outputs.count != 0
         uses: actions/github-script@v6
         env:
           LOG_MESSAGE: ${{ steps.log_message.outputs.run }}
