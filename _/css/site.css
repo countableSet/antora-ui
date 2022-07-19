@@ -1281,6 +1281,17 @@ a + .breadcrumbs {
 .doc .left {
   float: left;
 }
+.doc .float-gap.right {
+  margin: 0 1rem 1rem 0;
+}
+.doc .float-gap.left {
+  margin: 0 0 1rem 1rem;
+}
+.doc .float-group::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .doc .stretch {
   width: 100%;
 }
@@ -1497,6 +1508,18 @@ a + .breadcrumbs {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.doc .imageblock.text-left,
+.doc .videoblock.text-left {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.doc .imageblock.text-right,
+.doc .videoblock.text-right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .doc .imageblock img,
 .doc .imageblock object,
@@ -2247,12 +2270,14 @@ body {
           flex: auto;
   padding-left: 1rem;
 }
+.navbar-brand .navbar-item {
+  color: #fff;
+  color: var(--navbar-font-color);
+}
 .navbar-brand .navbar-item:first-child {
   -ms-flex-item-align: center;
       align-self: center;
   padding: 0;
-  color: #fff;
-  color: var(--navbar-font-color);
   font-size: 1.22222rem;
   font-size: calc(22/var(--rem-base)*1rem);
   -ms-flex-wrap: wrap;
