@@ -202,6 +202,7 @@ No sea, at invenire voluptaria mnesarchum has.
 Ex nam suas nemore dignissim, vel apeirian democritum et.
 At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus.
 
+.Ordered list with customized numeration
 [upperalpha]
 . potenti donec cubilia tincidunt
 . etiam pulvinar inceptos velit quisque aptent himenaeos
@@ -210,6 +211,7 @@ At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus
 Natum facilisis theophrastus an duo.
 No sea, at invenire voluptaria mnesarchum has.
 
+.Unordered list with customized marker
 [square]
 * ultricies sociosqu tristique integer
 * lacus volutpat semper porttitor aliquet ornare primis nulla enim
@@ -217,6 +219,13 @@ No sea, at invenire voluptaria mnesarchum has.
 
 Eu sed antiopam gloriatur.
 Ea mea agam graeci philosophia.
+
+[circle]
+* circles
+** circles
+*** and more circles!
+
+At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus.
 
 * [ ] todo
 * [x] done!
@@ -312,7 +321,11 @@ Don't forget this step!
 ====
 If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
 
- $ npm i -g @antora/cli @antora/site-generator-default
+ $ npm i -g @antora/cli @antora/site-generator
+
+Or you can install the metapackage to upgrade both packages at once.
+
+ $ npm i -g antora
 ====
 
 Nominavi luptatum eos, an vim hinc philosophia intellegebat.
