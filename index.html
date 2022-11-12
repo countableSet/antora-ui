@@ -444,6 +444,7 @@ Ex nam suas nemore dignissim, vel apeirian democritum et.
 At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus.</p>
 </div>
 <div class="olist upperalpha">
+<div class="title">Ordered list with customized numeration</div>
 <ol class="upperalpha" type="A">
 <li>
 <p>potenti donec cubilia tincidunt</p>
@@ -461,6 +462,7 @@ At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus
 No sea, at invenire voluptaria mnesarchum has.</p>
 </div>
 <div class="ulist square">
+<div class="title">Unordered list with customized marker</div>
 <ul class="square">
 <li>
 <p>ultricies sociosqu tristique integer</p>
@@ -476,6 +478,30 @@ No sea, at invenire voluptaria mnesarchum has.</p>
 <div class="paragraph">
 <p>Eu sed antiopam gloriatur.
 Ea mea agam graeci philosophia.</p>
+</div>
+<div class="ulist circle">
+<ul class="circle">
+<li>
+<p>circles</p>
+<div class="ulist">
+<ul>
+<li>
+<p>circles</p>
+<div class="ulist">
+<ul>
+<li>
+<p>and more circles!</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>At ornatus splendide sed, phaedrum omittantur usu an, vix an noster voluptatibus.</p>
 </div>
 <div class="ulist checklist">
 <ul class="checklist">
@@ -675,7 +701,15 @@ Eos suscipit scaevola at.</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>$ npm i -g @antora/cli @antora/site-generator-default</pre>
+<pre>$ npm i -g @antora/cli @antora/site-generator</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or you can install the metapackage to upgrade both packages at once.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ npm i -g antora</pre>
 </div>
 </div>
 </td>
@@ -767,7 +801,7 @@ on little cat feet.</pre>
 <footer class="footer">
   <p>This page was built using a <a href="https://github.com/countableSet/antora-ui">fork</a> of the Antora default UI.</p>
 </footer>
-<script src="_/js/site.js"></script>
+<script id="site-script" src="_/js/site.js" data-ui-root-path="_"></script>
 <script async src="_/js/vendor/highlight.js"></script>
   </body>
 </html>

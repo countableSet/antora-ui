@@ -93,6 +93,7 @@
   --admonition-background: var(--panel-background);
   --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-gray-70);
+  --caption-font-style: italic;
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
   --code-font-color: var(--body-font-color);
@@ -713,6 +714,8 @@ html.is-clipped--nav {
   padding: 0.5rem 0.75rem 0 0.75rem;
   margin: 0;
   overflow-y: scroll;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
   max-height: 100%;
   display: block;
 }
@@ -1609,13 +1612,18 @@ a + .breadcrumbs {
   padding-left: 0;
 }
 .doc ul.circle {
-  list-style-type: square;
+  list-style-type: circle;
 }
 .doc ul.disc {
-  list-style-type: square;
+  list-style-type: disc;
 }
 .doc ul.square {
   list-style-type: square;
+}
+.doc ul.circle ul:not([class]),
+.doc ul.disc ul:not([class]),
+.doc ul.square ul:not([class]) {
+  list-style: inherit;
 }
 .doc ol.arabic {
   list-style-type: decimal;
@@ -1639,7 +1647,7 @@ a + .breadcrumbs {
   list-style-type: lower-greek;
 }
 .doc ul.checklist {
-  padding-left: 0.5rem;
+  padding-left: 1.75rem;
 }
 .doc ul.checklist p > i.fa-check-square-o:first-child,
 .doc ul.checklist p > i.fa-square-o:first-child {
@@ -1650,6 +1658,7 @@ a + .breadcrumbs {
       -ms-flex-pack: center;
           justify-content: center;
   width: 1.25rem;
+  margin-left: -1.25rem;
 }
 .doc ul.checklist i.fa-check-square-o::before {
   content: "\2713";
@@ -1689,15 +1698,26 @@ a + .breadcrumbs {
   color: var(--caption-font-color);
   font-size: 0.88889rem;
   font-size: calc(16/var(--rem-base)*1rem);
+  font-style: italic;
+  font-style: var(--caption-font-style);
   font-weight: 700;
   font-weight: var(--caption-font-weight);
-  font-style: italic;
   -webkit-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
+}
+.doc .tableblock caption {
   text-align: left;
+}
+.doc .ulist .title,
+.doc .olist .title {
+  font-style: italic;
+  font-style: var(--caption-font-style);
+  font-weight: 700;
+  font-weight: var(--caption-font-weight);
+  margin-bottom: 0.25rem;
 }
 .doc .imageblock .title {
   margin-top: 0.5rem;
@@ -1808,9 +1828,9 @@ a + .breadcrumbs {
           box-shadow: inset 0 0 1.75px var(--pre-border-color);
   display: block;
   overflow-x: auto;
-  padding: 0.75rem;
+  padding: 0.875em;
 }
-.doc pre.highlight {
+.doc .listingblock > .content {
   position: relative;
 }
 .doc .source-toolbox {
@@ -1825,9 +1845,10 @@ a + .breadcrumbs {
   color: var(--pre-annotation-font-color);
   font-family: -apple-system, system-ui, blinkmacsystemfont, "Segoe UI", roboto, ubuntu;
   font-family: var(--body-font-family);
-  font-size: 0.75rem;
-  font-size: calc(13.5/var(--rem-base)*1rem);
+  font-size: 0.72222rem;
+  font-size: calc(13/var(--rem-base)*1rem);
   line-height: 1;
+  white-space: nowrap;
 }
 .doc .listingblock:hover .source-toolbox {
   visibility: visible;
@@ -1835,8 +1856,6 @@ a + .breadcrumbs {
 .doc .source-toolbox .source-lang {
   text-transform: uppercase;
   letter-spacing: 0.075em;
-  font-size: 0.96em;
-  line-height: 1.0425;
 }
 .doc .source-toolbox > :not(:last-child)::after {
   content: "|";
@@ -1854,7 +1873,7 @@ a + .breadcrumbs {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: transparent;
+  background: none;
   border: none;
   color: inherit;
   outline: none;
@@ -1898,8 +1917,8 @@ a + .breadcrumbs {
   color: var(--color-white);
   cursor: auto;
   opacity: 0;
-  -webkit-transition: opacity 0.5s ease 0.75s;
-  transition: opacity 0.5s ease 0.75s;
+  -webkit-transition: opacity 0.5s ease 0.5s;
+  transition: opacity 0.5s ease 0.5s;
 }
 .doc .source-toolbox .copy-toast::after {
   content: "";
@@ -2330,6 +2349,9 @@ body {
 #search-input:disabled::placeholder {
   color: #4c4c4c;
 }
+#search-input:focus {
+  outline: none;
+}
 .navbar-burger {
   background: none;
   border: none;
@@ -2412,6 +2434,20 @@ body {
 .navbar-dropdown .navbar-item {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.navbar-dropdown .navbar-item.has-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.navbar-dropdown .navbar-item small {
+  color: #8e8e8e;
+  color: var(--toolbar-muted-color);
+  font-size: 0.66667rem;
+  font-size: calc(12/var(--rem-base)*1rem);
 }
 .navbar-divider {
   background-color: #e1e1e1;
@@ -2573,6 +2609,11 @@ body {
   .navbar-dropdown .navbar-item {
     padding: 0.5rem 3rem 0.5rem 1rem;
     white-space: nowrap;
+  }
+
+  .navbar-dropdown .navbar-item small {
+    position: relative;
+    right: -2rem;
   }
 
   .navbar-dropdown .navbar-item:last-child {
