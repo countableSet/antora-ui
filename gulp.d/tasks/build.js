@@ -63,6 +63,12 @@ module.exports = (src, dest, preview) => () => {
       // NOTE concat already uses stat from newest combined file
       .pipe(concat('js/site.js')),
     vfs
+      .src('js/header/+([0-9])-*.js', { ...opts, read: false, sourcemaps })
+      .pipe(bundle(opts))
+      .pipe(uglify({ output: { comments: /^! / } }))
+      // NOTE concat already uses stat from newest combined file
+      .pipe(concat('js/header.js')),
+    vfs
       .src('js/vendor/*([^.])?(.bundle).js', { ...opts, read: false })
       .pipe(bundle(opts))
       .pipe(uglify({ output: { comments: /^! / } })),
